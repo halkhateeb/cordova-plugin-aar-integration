@@ -19,7 +19,7 @@ public class AarIntegration extends CordovaPlugin{
     public boolean execute(String action, JSONArray data, final CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("check")) {
-            String testText = "Hello my Friend";
+            String testText = data.getString(0);
             int count = ReadText.numVowels(testText);
             callbackContext.success(count);
           return true;
