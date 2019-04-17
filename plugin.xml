@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-plugin-aar-integration"
+        version="1.0.0">
+
+  <name>AarIntegration</name>
+
+  <engines>
+	<engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/aarIntegration.js" name="AarIntegration">
+	<clobbers target="window.plugins.aarintegration" />
+  </js-module>
+
+  <platform name="android">
+    <source-file src="src/android/com/halkhateeb/AarIntegration.java" target-dir="src/com/halkhateeb"/>
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="AarIntegration">
+        <param name="android-package" value="com.halkhateeb.AarIntegration"/>
+      </feature>
+    </config-file>
+
+<!--   	<config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  	</config-file> -->
+    <framework src="src/android/aarintegration.gradle" custom="true" type="gradleReference"/>
+    <resource-file src="src/android/textanalyzer.aar" target="libs/textanalyzer.aar"/>
+
+  </platform>
+
+</plugin>

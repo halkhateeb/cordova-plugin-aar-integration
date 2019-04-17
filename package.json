@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-aar-integration",
+  "version": "1.0.0",
+  "description": "Cordova Plugin aar Integration",
+  "author": "halkhateeb",
+  "cordova": {
+    "id": "cordova-plugin-aar-integration",
+    "platforms": "android"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halkhateeb/cordova-plugin-aar-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/halkhateeb/cordova-plugin-aar-integration/issues"
+  },
+  "homepage": "https://github.com/halkhateeb/cordova-plugin-aar-integration#readme",
+  "keywords": [
+    "cordova",
+    "arr",
+    "integration",
+    "ionic",
+    "library"
+  ],
+  "license": "MIT"
+}
