@@ -11,7 +11,7 @@ This is a cordova plugin to test the usage of aar within ionic
 Ionic local build
 
     # Newest versions
-    ionic cordova plugin add https://github.com/halkhateeb/cordova-plugin-aar-integration.git
+    ionic cordova plugin add https://github.com/halkhateeb/cordova-plugin-aar-integration.git#with-input
 
 
 ## Usage in javascript
@@ -20,7 +20,7 @@ Ionic local build
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-  window.plugins.aarintegration.check(successCallback, errorCallback);
+  window.plugins.aarintegration.check(successCallback, errorCallback, 'pass any text here');
 }
 
 function successCallback(result) {
@@ -36,7 +36,7 @@ function errorCallback(error) {
 
 ```ts
 
-  (<any>window).plugins.aarintegration.check((a) => this.successCallback(a), (b) => this.errorCallback(b));
+  (<any>window).plugins.aarintegration.check((a) => this.successCallback(a), (b) => this.errorCallback(b), 'pass any text here');
 
 
   successCallback(result) {
